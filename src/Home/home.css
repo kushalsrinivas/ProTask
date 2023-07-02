@@ -1,0 +1,411 @@
+.drawer {
+    position: fixed;
+    top: 0;
+    left: -300px; /* Initially hidden off-screen */
+    width: 300px;
+    height: 100vh;
+    background-color: #f0f0f0;
+    transition: left 0.3s ease-out; /* Smooth animation */
+    
+  }
+  
+  .drawer.open {
+    left: 0; /* Slide in when open */
+  
+    
+  }
+  
+  .drawer-content {
+    padding: 20px;
+  
+  }
+  .container {
+    display: flex;
+    padding: 20px;
+    align-items: flex-start;
+    position: relative; /* Added position relative */
+    z-index: 1; /* Added a higher z-index */
+  
+  }
+  .dropdown-container{
+    display: flex;
+
+    align-items:center ;
+
+    position: relative; /* Added position relative */
+    z-index: 1;
+  }
+  
+  .toggle-button {
+    margin-bottom: 10px;
+  }
+  .content {
+    flex: 1;
+    transition: margin-left 0.3s ease-in-out;
+    padding: 20px;
+  margin-left: 50px;
+  overflow: hidden;
+  
+  }
+  .milestone{
+    cursor:pointer;
+  }
+  .content.drawer-open {
+    margin-left: 300px;
+  }
+  .container {
+    display: flex;
+    align-items: center;
+  }
+  h1{
+    color: #5e503f;
+  }
+  h2 ,h3, h4, h5{
+    color: #5e503f;
+  }
+  
+  .toggle-button {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+  
+  
+    color: #5e503f; 
+    position: absolute;/* Changed position to absolute */
+    top: 20px; /* Adjusted top position */
+    left: 20px; 
+  }
+  
+  .burger-bar {
+    width: 25px;
+    height: 3px;
+    background-color: #000;
+    margin: 2.5px;
+    transition: transform 0.3s ease-out;
+    transform-origin: 50% 50%; /* Added transform-origin */
+  }
+  
+  .toggle-button.active{
+    position: absolute;
+  }
+  .toggle-button.active .burger-bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  
+  .toggle-button.active .burger-bar:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .toggle-button.active .burger-bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+  
+  
+  .chart-container{
+    display: flex;
+    padding: 10px;
+    justify-content: space-around;
+    overflow-x: scroll;
+  
+  }
+  
+  .navigation{ 
+    margin: 10 0px 0px 0px;
+    padding: 5px;
+  
+  }
+  .navigation button{
+    margin: 10px;
+  }
+  
+  .milestone-container{ 
+    max-height: 400px; /* Set the maximum height of the container */
+    overflow-y: auto;
+  }
+  .milestone {
+    background-color: #f5deb33e; /* Beige background color */
+    border-radius: 10px;
+    padding: 10px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 20px 0px;
+    justify-self: stretch;
+    justify-content: space-between;
+    align-items: center;
+    height: auto;
+  
+  }
+  .screen-header { 
+    display: flex;
+    justify-self: stretch;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .card-header {
+    font-size: 18px;
+    font-weight: bold;
+    color: #5e503f; /* Beige header text color */
+    margin-bottom: 10px;
+  }
+
+
+  .create-project-section {
+    margin-bottom: 20px;
+    gap: 10px;
+  }
+ 
+  .project-form {
+    display: flex;
+    flex-direction: column;
+
+    word-wrap: normal;
+    gap: 10px;
+    transition:  3s ease-in-out; /* Smooth transition for form visibility */
+  }
+  
+  .form-buttons {
+    display: flex;
+    gap: 10px;
+  }
+
+  
+  /* Styling for the form inputs and buttons */
+  textarea[type='text'] {
+    padding: 8px;
+    border: none;
+    border-radius: 4px;
+    height: 10vh;
+    width: 40%;
+  }
+
+  .action-button{
+
+    padding: 16px 32px;
+    background-color: #5e503f24;
+    color: #5e503f;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+
+  }
+  .query-container { 
+    display: flex;
+    flex-direction: 1;
+    gap : 10px;
+  }
+  .copy-button {
+    height:210px;
+
+    padding: 10px 32px;
+    background-color: #5e503f24;
+    color: #5e503f;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+.form textarea {
+  width: 50%;
+  height:200px;
+  resize: none;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 5px;
+  margin-bottom: 10px;
+}
+.create-button {
+    padding: 100px 100px;
+    background-color: #ae95765f;
+    color: #857057;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .create-button:hover {
+    background-color: #5e503f70;
+  }
+  
+  .create-button:active {
+    background-color: #7e623e93;
+  }
+  .action-button:hover {
+    background-color: #5e503f70;
+  }
+  
+  .action-button:active {
+    background-color: #7e623e93;
+  }
+  .copy-button:hover {
+    background-color: #5e503f70;
+  }
+  
+  .copy-button:active {
+    background-color: #7e623e93;
+  }
+  
+  .create-button span {
+    margin-right: 4px;
+  }
+
+  .projects  { 
+    height: 150px ;
+    width : 250px;
+    padding: 50px;
+    background-color: #ae95765f;
+    color: #5e503f;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  .projects:hover {
+    background-color: #5e503f70;
+  }
+  
+  .projects:active {
+    background-color: #7e623e93;
+  }
+  
+  .projects span {
+    margin-right: 4px;
+  }
+  .date-picker-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  
+  .custom-date-picker {
+    padding: 8px;
+    border: none;
+    background-color: #5e503f24;
+    color: #333;
+    font-size: 16px;
+  }
+  
+  .custom-date-picker:hover {
+    background-color: #5e503f70;
+  }
+  
+  .react-datepicker {
+    font-family: Arial, sans-serif;
+    border-radius: 4px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  }
+  
+  .react-datepicker__header {
+    background-color: #5e503f24;
+    border-bottom: none;
+  }
+  
+  .react-datepicker__day {
+    color: #333;
+  }
+  
+  .react-datepicker__day--selected {
+    background-color: #eae2d9;
+    color: #333;
+  }
+  
+  .react-datepicker__day--keyboard-selected {
+    background-color: #eae2d9;
+    color: #333;
+  }
+  
+  .dropdown {
+    margin-right: 10px;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: #5e503f24;
+    font-size: 14px;
+  }
+  
+  .datepicker {
+    margin-right: 10px;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #b1aeae;
+    background-color: #5e503f24;
+    font-size: 14px;
+    width: 150px;
+  }
+
+  .card-section {
+    display: flex;
+    flex-direction: row;
+    word-wrap: normal;
+    gap: 10px;
+    transition:  3s ease-in-out;
+  }
+  .card {
+    border: 1px solid #ccc;
+    border-left-width: 10px;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: #ae95765f;
+    margin-bottom: 10px;
+  }
+  
+  .card.high {
+    border-left-color: rgba(255, 0, 0, 0.367);
+  }
+  
+  .card.High {
+    border-left-color: rgba(255, 0, 0, 0.367);
+  }
+  .card.medium {
+    border-left-color: rgba(0, 128, 0, 0.42);
+  }
+  .card.Medium {
+    border-left-color: rgba(0, 128, 0, 0.42);
+  }
+  
+  
+  .card.low {
+    border-left-color: rgba(255, 255, 0, 0.462);
+  }
+  
+  .card.Low {
+    border-left-color: rgba(255, 255, 0, 0.462);
+  }
+  
+  .create-project-section {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: 1;
+  }
+  .create-project-section div{
+
+  }
+  
+  .project-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    transition: opacity 2s ease-in-out; /* Smooth transition for form visibility */
+  }
+  
+  .form-buttons {
+    display: flex;
+    gap: 10px;
+  }
+  
+  /* Styling for the form inputs and buttons */
+  input[type='text'] {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+
+  .action-button :hover { 
+    background-color: #ccc;
+  }
+
+  

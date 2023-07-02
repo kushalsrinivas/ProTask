@@ -1,0 +1,111 @@
+/* App Container */
+.app {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+  }
+  
+  /* Heading */
+  h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  /* Form */
+  form {
+    display: flex;
+    margin-bottom: 20px;
+  
+  }
+  
+  input[type="text"] {
+    flex: 1;
+    /* padding: 10px; */
+    font-size: 1rem;
+    border: none;
+    outline: none;
+  
+  }
+  
+  button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #5e503f;
+    color: white;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+  }
+  
+  /* Todo List */
+  .todo-list li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    cursor: pointer;
+  }
+  
+  .todo-list li.completed {
+    text-decoration: line-through;
+    color: #888;
+  }
+  
+  .todo-list input[type="checkbox"] {
+    margin-right: 10px;
+    cursor: pointer;
+  
+  }
+  
+  
+  /* Checkbox */
+  .checkbox {
+    position: relative;
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border: 2px solid #ccc;
+    border-radius: 3px;
+    margin-right: 10px;
+    cursor: pointer;
+  }
+  
+  .checkbox::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 10px;
+    height: 10px;
+    background-color: transparent;
+    border-radius: 2px;
+    transition: background-color 0.2s ease;
+  }
+  
+  .checkbox input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+  }
+  
+  .checkbox input:checked ~ .checkbox::before {
+    background-color: #ff0000;
+  }
+  
+  .checkbox input:checked ~ .checkbox {
+    border-color: #ee0b0b;
+  }
+  
+  .checkbox input:focus ~ .checkbox {
+    outline: 2px solid #ff0000;
+  }
+  
+  .checkbox:hover {
+    border-color: #ff0000;
+  }
+  
+  .checkbox:hover::before {
+    background-color: #000000;
+  }
+  

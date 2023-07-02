@@ -1,38 +1,155 @@
-.App {
-  text-align: center;
+.drawer {
+  position: fixed;
+  top: 0;
+  left: -300px; /* Initially hidden off-screen */
+  width: 300px;
+  height: 100vh;
+  background-color: #f0f0f0;
+  transition: left 0.3s ease-out; /* Smooth animation */
+  
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.drawer.open {
+  left: 0; /* Slide in when open */
+
+  
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.drawer-content {
+  padding: 20px;
+
+}
+.container {
+  display: flex;
+  padding: 20px;
+  align-items: flex-start;
+  position: relative; /* Added position relative */
+  z-index: 1; /* Added a higher z-index */
+
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+li {
+  margin-bottom: 10px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+.toggle-button {
+  margin-bottom: 10px;
+}
+.content {
+  flex: 1;
+  transition: margin-left 0.3s ease-in-out;
+  padding: 20px;
+margin-left: 50px;
+overflow: hidden;
+
+}
+.milestone{
+  cursor:pointer;
+}
+.content.drawer-open {
+  margin-left: 300px;
+}
+.container {
+  display: flex;
+  align-items: center;
+}
+h1{
+  color: #5e503f;
+}
+h2 ,h3, h4, h5{
+  color: #5e503f;
+}
+
+.toggle-button {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+
+
+  color: #5e503f; 
+  position: absolute;/* Changed position to absolute */
+  top: 20px; /* Adjusted top position */
+  left: 20px; 
 }
 
-.App-link {
-  color: #61dafb;
+.burger-bar {
+  width: 25px;
+  height: 3px;
+  background-color: #000;
+  margin: 2.5px;
+  transition: transform 0.3s ease-out;
+  transform-origin: 50% 50%; /* Added transform-origin */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.toggle-button.active{
+  position: absolute;
+}
+.toggle-button.active .burger-bar:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.toggle-button.active .burger-bar:nth-child(2) {
+  opacity: 0;
+}
+
+.toggle-button.active .burger-bar:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+
+.chart-container{
+  display: flex;
+  padding: 10px;
+  justify-content: space-around;
+  overflow-x: scroll;
+
+}
+
+.navigation{ 
+  margin: 10 0px 0px 0px;
+  padding: 5px;
+
+}
+.navigation button{
+  margin: 10px;
+}
+
+.milestone-container{ 
+  max-height: 400px; /* Set the maximum height of the container */
+  overflow-y: auto;
+}
+.milestone {
+  background-color: #f5deb33e; /* Beige background color */
+  border-radius: 10px;
+  padding: 10px 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin: 20px 0px;
+  justify-self: stretch;
+  justify-content: space-between;
+  align-items: center;
+  height: auto;
+
+}
+.screen-header { 
+  display: flex;
+  justify-self: stretch;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-header {
+  font-size: 18px;
+  font-weight: bold;
+  color: #5e503f; /* Beige header text color */
+  margin-bottom: 10px;
 }
